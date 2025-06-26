@@ -1,6 +1,6 @@
 {
-  "_base": "https://raw.githubusercontent.com/Emanuel-de-Jong/L1C0-B3nLib_x86_EXE/main/",
+  "_base": "https://raw.githubusercontent.com/Emanuel-de-Jong/L1C0-B3nLib_x86_EXE/main/assets/audio/",
   "voice_lines": [
-    "not_enough_minerals_(sc2).mp3"
+    "voice_lines/not_enough_minerals_(sc2).mp3"
   ]
 }
