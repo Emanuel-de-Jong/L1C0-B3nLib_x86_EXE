@@ -1,0 +1,8 @@
+Languages
+    Strudel
+        Editor: https://strudel.cc/
+        Docs: https://strudel.cc/workshop/getting-started/
+
+    Hydra
+        Editor: https://hydra.ojack.xyz/
+        Docs: https://hydra.ojack.xyz/docs/docs/learning/
