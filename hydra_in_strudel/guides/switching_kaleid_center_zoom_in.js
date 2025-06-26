@@ -1,0 +1,7 @@
+src(s0)
+  .repeat(10, 10)
+  .kaleid(H("<2 4 8>"))
+  .modulateScale(osc(4,-0.5,0).kaleid(50).scale(0.5), 15, 0)
+  .diff(osc(1,0.5,5))
+  .brightness(-0.4)
+  .out()

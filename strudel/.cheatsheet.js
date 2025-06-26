@@ -1,4 +1,5 @@
 sine.range(min,max) // Automatic change
+slider(current, min, max, step)
 
 // EFFECTS
 jux(func) // Second sound with added effect
