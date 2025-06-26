@@ -1,4 +1,5 @@
 // "tupper class" @by eddyflux
+// @version 1.0
 
 samples('github:yaxu/clean-breaks')
 samples('github:eddyflux/crate')
@@ -30,6 +31,7 @@ stack(
   .sometimesBy("0 [0 .5] 0 0", x=>x.set.squeeze(gain(".9 .6 .2 .1")).room(.3))
   .sometimesBy("0 [0  0] 0 .5", x=>x.mul(speed("-2")))
   .hurry("<.5!4 1!16>")
+  //.hush()
   ,
   s("useme/2").fit()
   .chop("<16 32>/32")//.rarely(ply("2"))
@@ -43,5 +45,3 @@ stack(
 )
   .reset("<x@3 x*[4 [8 [16 32]]] x@16>")
   .late("[0 .002]*16")
-
-// @version 1.0
