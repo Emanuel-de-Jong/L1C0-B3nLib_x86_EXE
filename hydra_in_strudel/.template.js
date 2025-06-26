@@ -26,7 +26,3 @@ src(s0)
 $: n(pattern).scale("A:minor").piano()
 
 all(x => x.fft(5).scope({pos:0,smear:0.5}))
-
-// EXPLANATIONS
-H("") //Strudel pattern in Hydra.
-all(x => x) //Strudel visuals in Hydra. Needs `src(s0)` for Hydra code and `$:` for sound to be registered.
