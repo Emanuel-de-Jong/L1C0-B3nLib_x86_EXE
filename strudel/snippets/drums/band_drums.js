@@ -12,6 +12,6 @@ $: sound("sd")
 
 $: sound("hh!8")
   .n("[0 | 1]*8")
-  .sometimesBy(.2, x => x.ply("2"))
+  .sometimesBy(.2, x=>x.ply("2"))
   .gain(.4)
   ._punchcard()

@@ -12,7 +12,7 @@ src(s0)
   .diff(osc(1,0.5,5))
   .out()
 
-all(x => x.fft(1).scope({pos:0,smear:0.5}))
+all(x=>x.fft(1).scope({pos:0,smear:0.5}))
 
 // FEATURE SHOWCASE
 await initHydra({feedStrudel:1})
@@ -25,4 +25,4 @@ src(s0)
 
 $: n(pattern).scale("A:minor").piano()
 
-all(x => x.fft(5).scope({pos:0,smear:0.5}))
+all(x=>x.fft(5).scope({pos:0,smear:0.5}))

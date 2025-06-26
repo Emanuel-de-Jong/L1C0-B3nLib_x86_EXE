@@ -3,15 +3,12 @@ $: n(`<
     [10@3 10@3 11@3 11@3 13@2 13@2] [9@3 9@3 9@3 9@3 9@2 8@2] [9@3 9@3 9@3 8@3 8@2 8@2] [7@3 7@3 7@3 7@3 7@2 7@2]
     [11@3 11@3 14@3 14@3 16@2 16@2] [10@3 10@3 10@3 10@3 10@2 9@2] [10@3 10@3 10@3 9@3 9@2 9@2] [8@3 8@3 8@3 8@3 8@2 8@2]
     [9@3 9@3 8@3 8@3 6@2 6@2] [7@3 7@3 7@3 7@3 7@2 7@2] [7@3 7@3 7@3 7@3 7@2 7@2] [7@3 7@3 7@3 7@3 7@2 7@2]>`)
-  .scale("F#3:minor")
-  .sound("<sawtooth square triangle sine white pink brown>")
-  .n("16") // Number of harmonic partials. More muffled sound.
-  .shape(.1)
-  .dec(0.8)
-  .vib(8) // Vibrato speed. Jojo sound.
-  .room(.5)
-  .echo(2, 1/6, .3)
-  .segment(4) // Notes per cycle
-  .hpf(200) // High pass filter. Removes bass.
-  .lpf(2000) // Low pass filter. Removes treble.
-  ._scope()
+  .layer(
+    x=>x.s("piano").scale("F#2:minor").late(0.00).gain(1),
+    x=>x.s("piano").scale("F#3:minor").late(0.02).gain(1),
+    x=>x.s("piano").scale("F#4:minor").late(0.04).gain(1),
+    x=>x.s("piano").scale("F#5:minor").late(0.06).gain(1),
+    x=>x.s("piano").scale("F#6:minor").late(0.08).gain(1))
+  .room(.6)
+  .att(.1)
+  .rel(.5)

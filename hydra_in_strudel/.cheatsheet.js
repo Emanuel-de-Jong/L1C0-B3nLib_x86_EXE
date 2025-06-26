@@ -3,4 +3,4 @@ repeat(repeat_x, repeat_y, !offset_x, !offset_y) // Multiple copies of object in
 
 // Strudel
 H("") // Strudel pattern in Hydra.
-all(x => x) // Strudel visuals in Hydra. Needs `src(s0)` for Hydra code and `$:` for sound to be registered.
+all(x=>x) // Strudel visuals in Hydra. Needs `src(s0)` for Hydra code and `$:` for sound to be registered.
