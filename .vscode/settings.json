@@ -1,3 +1,10 @@
 {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.showUnused": false,
+    "editor.inlineSuggest.enabled": false,
+    "editor.suggest.showDeprecated": false,
+    "problems.decorations.enabled": false,
+    "javascript.validate.enable": false,
+    "javascript.suggest.enabled": false,
+    "javascript.showDeprecated": false,
 }

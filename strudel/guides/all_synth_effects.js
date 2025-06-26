@@ -8,5 +8,10 @@ $: n(`<
   .n("16") // Number of harmonic partials. More muffled sound.
   .shape(.1)
   .dec(0.8)
-  .vib("8") // Vibrato speed. Jojo sound.
+  .vib(8) // Vibrato speed. Jojo sound.
+  .room(.5)
+  .echo(2, 1/6, .3)
+  .segment(4) // Notes per cycle
+  .hpf(200) // High pass filter. Removes bass.
+  .lpf(2000) // Low pass filter. Removes treble.
   ._scope()

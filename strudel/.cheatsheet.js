@@ -1,3 +1,8 @@
+sine.range(min,max) // Automatic change
+
+// EFFECTS
+jux(func) // Second sound with added effect
+
 // PATTERN
 /*
 1!2 // Same as: 1 1
