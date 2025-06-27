@@ -2,6 +2,7 @@ Languages
     Strudel
         Editor: https://strudel.cc/
         Docs: https://strudel.cc/workshop/getting-started/
+        Docs Summary: https://strudel.cc/workshop/recap/
 
     Hydra
         Editor: https://hydra.ojack.xyz/

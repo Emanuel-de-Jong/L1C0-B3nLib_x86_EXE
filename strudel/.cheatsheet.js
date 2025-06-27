@@ -8,6 +8,10 @@ sine saw square tri // Automation waveforms.
 .ribbon(seed, length_in_cycles) // Random uses ribbon. Creates consistent loop.
 .pan(number) // Left or right speaker. 0 - 1 (left).
 
+// PATTERN EFFECTS
+.add(note_increase)
+.off(cycle_length, x=>other_effect()) // Plays og + new note \w effect later. cycle_length 1/16 is 1/16 of 1 cycle.
+
 // PATTERN
 /*
 1!2 // Same as: 1 1
