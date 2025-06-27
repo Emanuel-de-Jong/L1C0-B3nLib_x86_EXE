@@ -1,0 +1,7 @@
+note("c e g b g e")
+  .s("triangle")
+  .fm(1)
+  .fmh(1)
+  .room(.3)
+  .attack(.1)
+  .release(.3)

@@ -4,7 +4,7 @@ sine saw square tri // Automation waveforms.
 
 // EFFECTS
 .jux(func) // Second sound with added effect.
-.lpenv(slider(0, 0, 8)) // Common muffled to bright.
+.lpenv(slider(0, 0, 8)) // Common? muffled to bright. Needs lpf.
 .ribbon(seed, length_in_cycles) // Random uses ribbon. Creates consistent loop.
 .pan(number) // Left or right speaker. 0 - 1 (left).
 

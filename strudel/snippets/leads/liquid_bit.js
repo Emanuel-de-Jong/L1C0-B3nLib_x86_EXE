@@ -1,0 +1,6 @@
+$: n(run("<4 8>"))
+  .chord("<C^7 <Db^7 Fm7>>")
+  .dict('ireal')
+  .voicing()
+  .room(.2)
+  .fast(2)

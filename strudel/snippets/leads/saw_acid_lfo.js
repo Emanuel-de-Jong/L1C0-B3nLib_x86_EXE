@@ -1,4 +1,4 @@
-note("[c eb g <f bb>](3,8,<0 1>)".sub(12))
+$: note("[c eb g <f bb>](3,8,<0 1>)".sub(12))
   .s("<sawtooth>/64")
   .lpf(sine.range(300,2000).slow(16))
   .lpa(0.005)

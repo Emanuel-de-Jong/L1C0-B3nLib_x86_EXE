@@ -1,0 +1,5 @@
+$: note("c2 e2 f2 g2")
+  .sound('sawtooth')
+  .lpf(300)
+  .lpa(.5)
+  .lpenv("-4")
