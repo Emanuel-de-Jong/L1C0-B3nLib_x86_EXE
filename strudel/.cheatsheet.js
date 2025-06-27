@@ -13,6 +13,8 @@ sine saw square tri // Automation waveforms.
 // PATTERN EFFECTS
 .add(note_increase)
 .off(cycle_length, x=>other_effect()) // Plays og + new note \w effect later. cycle_length 1/16 is 1/16 of 1 cycle.
+.early(1/8) // Offset to just before normal note play.
+.late(1/8)
 
 // PATTERN
 /*
@@ -27,7 +29,7 @@ sine saw square tri // Automation waveforms.
 run(4) // 0 to n-1 `n(run(4))`
 
 // VISUALIZATION (without `_` is fullscreen)
-_punchcard() // Notes how they are at the end.
-_pianoroll() // Notes how they are at that line.
-_scope() // Sound wave.
-_spectrum() // Punchcard with full sound spectrum instead of notes.
+._punchcard() // Notes how they are at the end.
+._pianoroll() // Notes how they are at that line.
+._scope() // Sound wave.
+._spectrum() // Punchcard with full sound spectrum instead of notes.
