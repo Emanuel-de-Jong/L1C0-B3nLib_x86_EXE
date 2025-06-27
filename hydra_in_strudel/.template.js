@@ -23,6 +23,8 @@ src(s0)
   .diff(osc(1,0.5,5))
   .out()
 
-$: n(pattern).scale("A:minor").piano()
+$: n(pattern)
+  .scale("A:minor")
+  .sound("piano")
 
 all(x=>x.fft(5).scope({pos:0,smear:0.5}))
