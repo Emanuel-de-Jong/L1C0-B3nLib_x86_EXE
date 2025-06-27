@@ -1,1 +1,1 @@
-note("c e g b").s("bd")
+$: note("c e g b").s("bd")

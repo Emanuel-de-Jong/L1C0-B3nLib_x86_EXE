@@ -1,4 +1,4 @@
-note("c e g b g e")
+$: note("c e g b g e")
   .s("triangle")
   .fm(1)
   .fmh(1)
