@@ -1,0 +1,10 @@
+setcpm(50)
+
+$: n("<0 1 [0,1,2,3]@3>*4")
+  .s("piano")
+  .chord("<Am9>")
+  .voicing()
+  .transpose("<0 7 14 21 28 35 42 49 56 63 70 77 >".mod(12))
+  .sub(note(12))
+  .clip(1)
+  .rel(.1)
