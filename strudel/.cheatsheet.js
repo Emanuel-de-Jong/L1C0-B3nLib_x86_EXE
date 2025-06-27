@@ -23,6 +23,9 @@ sine saw square tri // Automation waveforms.
 {}%4 // Switch 4 times per cycle.
 */
 
+// SEQUENCE
+run(4) // 0 to n-1 `n(run(4))`
+
 // VISUALIZATION (without `_` is fullscreen)
 _punchcard() // Notes how they are at the end.
 _pianoroll() // Notes how they are at that line.

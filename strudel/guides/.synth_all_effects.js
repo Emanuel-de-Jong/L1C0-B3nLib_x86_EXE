@@ -18,6 +18,7 @@ $: n(`<
   .dec(0.8)
   .vib(8) // Vibrato speed. Jojo sound.
   .room(.5)
+  .rsize(1) //
   .echo(2, 1/6, .3)
   .delay(".8:.12") // Also echo
   .segment(4) // Notes per cycle'
