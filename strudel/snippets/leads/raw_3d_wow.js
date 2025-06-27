@@ -18,3 +18,8 @@ $: note("<g1 bb1 d2 f1>")
   .add(note("0, .1, .2"))
   .s("sawtooth")
   .scope()
+
+// Rhythm
+$: s("hh*8")
+  .gain("<.05 .075 .1 .075>")
+  .pan(sine.range(.2, .8).slow(irand(4).range(1, 4)))
