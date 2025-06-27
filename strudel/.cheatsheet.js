@@ -7,6 +7,8 @@ sine saw square tri // Automation waveforms.
 .lpenv(slider(0, 0, 8)) // Common? muffled to bright. Needs lpf.
 .ribbon(seed, length_in_cycles) // Random uses ribbon. Creates consistent loop.
 .pan(number) // Left or right speaker. 0 - 1 (left).
+.compressor("threshold:ratio:knee:attack:release")
+.coarse(4) // Emulate lower bit rate (wave becomes horizontaly pixelated). Distortion, 8-bit, cracling mix.
 
 // PATTERN EFFECTS
 .add(note_increase)
