@@ -25,6 +25,6 @@ src(s0)
 
 $: n(pattern)
   .scale("A:minor")
-  .sound("piano")
+  .s("piano")
 
 all(x=>x.fft(5).scope({pos:0,smear:0.5}))

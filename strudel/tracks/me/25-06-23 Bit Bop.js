@@ -11,7 +11,7 @@ stack(
       [0 [2 4] ~ 0 [2 4] 5 3 2]
       [[4 0] ~ -1 ~ [-1 -2] -2 2 0]>`)
     .scale("E2:minor")
-    .sound("square")
+    .s("square")
     .room(0.5)
   
   ,n(`<
@@ -22,7 +22,7 @@ stack(
     .clip(.5)
     .release(.2)
     .scale("E2:minor")
-    .sound("sawtooth")
+    .s("sawtooth")
     .clip(4)
     .gain(0.3)
   

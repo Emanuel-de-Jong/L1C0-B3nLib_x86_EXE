@@ -1,7 +1,7 @@
 $: n("5 6 3 5 2 4 1 2")
   .sub(12)
   .scale("Eb1:major:pentatonic")
-  .sound("sawtooth")
+  .s("sawtooth")
   .fm("4")
   .lpf(slider(1660, 300, 2000, 1))
   .lpa(perlin.range(.2,.8).slow(2))

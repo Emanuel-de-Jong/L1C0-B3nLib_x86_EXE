@@ -18,7 +18,7 @@ $: sound("hh!8")
 
 let chords = chord("<Bbm9 Fm9>/4").dict('ireal')
 $: chords.n("[0 <4 3 <2 5>>*2](<3 5>,8)")
-  .sound("sawtooth")
+  .s("sawtooth")
   .anchor("D5")
   .voicing()
   .segment(8)
