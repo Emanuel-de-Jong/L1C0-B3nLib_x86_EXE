@@ -22,7 +22,10 @@ sine saw square tri // Automation waveforms.
 1*2 // Same as: [1 1]
 1@2 // Plays twice as long.
 1/2 // Plays every second loop.
-{}%4 // Switch 4 times per cycle.
+{}%4 // Polymeter. Switch 4 times per cycle.
+{} // Synch up patterns over multiple cycles. e.g. {c2 g2, c eb g}:
+   // both are played at the same speed so `c2` matches with `c` then `g` then `eb`
+1!4? // Questionmark degrades half randomly.
 */
 
 // SEQUENCE
