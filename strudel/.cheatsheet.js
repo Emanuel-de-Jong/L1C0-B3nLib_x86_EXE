@@ -9,6 +9,7 @@ sine saw square tri // Automation waveforms.
 .pan(number) // Left or right speaker. 0 - 1 (left).
 .compressor("threshold:ratio:knee:attack:release")
 .coarse(4) // Emulate lower bit rate (wave becomes horizontaly pixelated). Distortion, 8-bit, cracling mix.
+.cut(1) // Stops the last sample when the next begins.
 
 // PATTERN EFFECTS
 .add(note_increase)
