@@ -1,0 +1,12 @@
+setcpm(120/4)
+
+$: n(perlin.range2(-12, 12).fast(12).segment(24))
+  .sometimesBy(.4, x=>x.ply(2))
+  // .sometimesBy(.4, x=>x.add("4|6"))
+  // .sometimesBy(.4, x=>x.sub("4|6"))
+  .degradeBy(.3)
+  .scale("C2:minor")
+  .sound("sawtooth, triangle")
+  .slow(4)
+  .ribbon(5342, 4)
+  ._punchcard()
