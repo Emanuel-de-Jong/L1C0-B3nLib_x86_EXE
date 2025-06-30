@@ -28,7 +28,7 @@ rangex(min, max) // Exponential
 {}%4 // Polymeter. Switch 4 times per cycle.
 {} // Synch up patterns over multiple cycles. e.g. {c2 g2, c eb g}:
    // both are played at the same speed so `c2` matches with `c` then `g` then `eb`
-1!4? // Questionmark degrades half randomly. Can be controlled with Ribbon.
+1!4?0.2 // Shorthand degradeBy. Can be controlled with Ribbon.
 */
 
 // Continuous Signals

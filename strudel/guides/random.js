@@ -30,3 +30,8 @@ $: s("hh*8")
   .mask(brandBy(0.8))
   .ribbon(0, 2)
   ._punchcard()
+
+$: s("bd")
+  .segment(16)
+  .degradeBy(.5)
+  .ribbon(16,1)
