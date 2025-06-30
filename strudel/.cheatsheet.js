@@ -1,6 +1,8 @@
 sine.range(min,max) // Automatic change.
 slider(current, min, max, step)
-sine saw square tri // Automation waveforms.
+sine saw square tri rand // Automation waveforms. rand = random
+rangex(min, max) // Exponential
+"c:.5 a:1 f:.25 e:.8".as("note:clip")
 
 // EFFECTS
 .jux(func) // Second sound with added effect.

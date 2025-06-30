@@ -4,4 +4,7 @@ setcpm(120/4)
 
 // $: n("0 1 2").s("vl_not_enough_minerals")
 
-$: n(irand(3)).struct("x x*2 x x*3").ribbon(20, 2).s("vl_not_enough_minerals")
+$: n(irand(3))
+  .struct("x x*2 x x*3")
+  .ribbon(20, 2)
+  .s("vl_not_enough_minerals")
