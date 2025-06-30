@@ -1,7 +1,7 @@
 // NOTES/SAMPLES
 // Melody
 $: n(irand(8).segment(4))
-  .scale("c:pentatonic")
+  .scale("C:pentatonic")
   .ribbon(35, 4)
   .fast(2)
   ._punchcard()
