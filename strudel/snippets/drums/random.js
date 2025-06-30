@@ -1,7 +1,7 @@
 const DRUM_BANK = "RolandTR909"
-let bassDrum = s("[bd bd?0.5]*4").bank(DRUM_BANK)
-  .degradeBy(.5).ribbon(slider(0, 0, 1024, 32), 4)
-  .n(wchoose([0,3],[1,1],[2,0],[3,0],[4,0],[5,0])).ribbon(slider(0, 0, 1024, 32), 4)
+let bassDrum = n(wchooseCycles([0,3],[1,1],[2,0],[3,0],[4,0],[5,0]))
+  .bank(DRUM_BANK).fast(8).ribbon(slider(0, 0, 1024, 32), 4)
+  .s(wchoose(["bd ~",3],["~ bd",1],["~ ~",4])).ribbon(slider(0, 0, 1024, 32), 4)
 let snareDrum = s("[sd?0.5 sd]*4").bank(DRUM_BANK)
   .degradeBy(.5).ribbon(slider(32, 0, 1024, 32), 4)
   .n(wchoose([0,3],[1,1],[2,0],[3,0],[4,0],[5,0])).ribbon(slider(32, 0, 1024, 32), 4)
