@@ -25,3 +25,8 @@ $: s("bd*4, hh*8")
   .lpf(rand.range(500,8000))
   .ribbon(4312, 2)
   ._punchcard()
+
+$: s("hh*8")
+  .mask(brandBy(0.8))
+  .ribbon(0, 2)
+  ._punchcard()

@@ -1,6 +1,6 @@
 sine.range(min,max) // Automatic change.
 slider(current, min, max, step)
-sine saw square tri rand // Automation waveforms. rand = random
+sine saw square tri rand perlin // Automation waveforms. rand = random
 rangex(min, max) // Exponential
 "c:.5 a:1 f:.25 e:.8".as("note:clip")
 
@@ -30,6 +30,16 @@ rangex(min, max) // Exponential
    // both are played at the same speed so `c2` matches with `c` then `g` then `eb`
 1!4? // Questionmark degrades half randomly. Can be controlled with Ribbon.
 */
+
+// Continuous Signals
+sine
+sine2 // -1 to 1
+cosine
+saw
+square
+tri
+rand // Random
+perlin // Noise. Meaning random but not jumpy.
 
 // SEQUENCE
 run(4) // 0 to n-1 `n(run(4))`
