@@ -14,7 +14,7 @@ $: n(`<
   .release(.2)
   .adsr(".1:.1:.2:.2")
 
-  .shape(.1)
+  .distort(.1)
   .dec(0.8)
   .vib(8) // Vibrato speed. Jojo sound.
   .room(.5)
