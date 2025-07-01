@@ -2,8 +2,8 @@
 
 setcpm(138/4)
 
-const ROOT_NOTE = 'E'
-const SCALE_TYPE = ':dorian'
+const ROOT_NOTE = 'C#'
+const SCALE_TYPE = ':major'
 
 let drums = note("[D2 E2]*2")
   .s("[bd:1 bd:1]*2")
@@ -13,13 +13,22 @@ let drums = note("[D2 E2]*2")
   .release(.8)
 
 let triplets = n("[~ -5 0 0]*4"
-    .add("<2 -3 -1 <0 1>>"))
+    .add("<2 -3 -1 <0 -2>>"))
   .scale(ROOT_NOTE + '2' + SCALE_TYPE)
   .s("sawtooth, sine")
   .lpf(150)
   .lpd(.3)
   .distort(.7)
   .postgain(0.8)
+
+// $: n(`<
+// [1 [[1 1 ~] 1] ~ [1 -2]] [0 [[0 0 ~] 0] ~ ~]
+// [0 [[0 0 ~] 0] ~ [0 -2]] [-1 [[-1 -1 ~] -1] ~ [-1 0]]
+// [1 [[1 1 ~] 1] ~ [1 2]] [0 [[0 0 ~] 0] ~ ~]
+// [0 [[0 0 ~] 0] ~ [0 -2]] [-1 [[-1 -1 ~] -1] ~ [-1 0]]
+// >`)
+//   .scale("C#:major")
+//   .piano()
 
 const SUPPORT_WAVE = "sawtooth"
 let support = n(`<
@@ -70,4 +79,4 @@ let lead = n(`<
 $: drums
 $: triplets
 $: support
-$: lead
+// $: lead
