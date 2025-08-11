@@ -2,4 +2,4 @@
 
 Mostly for making beats in [strudel](https://strudel.cc/).
 
-![3DSynthExample](/results/3D_Synth.mp3)
+https://github.com/user-attachments/assets/a409a323-a77c-4ac2-b327-77c3ce381221
