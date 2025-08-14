@@ -7,5 +7,7 @@
     "voice_lines/not_enough_minerals_(sc2)/not_enough_minerals.mp3"
   ],
   "vl_yeah": "voice_lines/yeah.wav",
-  "dl_impeach_the_president": "drum_loops/impeach_the_president.wav"
+  "dl_impeach_the_president": "drum_loops/impeach_the_president.wav",
+  "fx_riser_1": "fx/riser_1.mp3",
+  "fx_bass_drop_1": "fx/bass_drop_1.mp3"
 }
