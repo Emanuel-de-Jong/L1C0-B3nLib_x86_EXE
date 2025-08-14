@@ -2,4 +2,4 @@
 
 Mostly for making beats in [strudel](https://strudel.cc/).
 
-https://github.com/user-attachments/assets/a409a323-a77c-4ac2-b327-77c3ce381221
+https://github.com/user-attachments/assets/c38f8c74-62d3-48a7-ad01-3858fe014723
