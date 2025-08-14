@@ -1,4 +1,5 @@
 // "TrackTrusion" @by GVbot
+samples('https://raw.githubusercontent.com/Emanuel-de-Jong/L1C0-B3nLib_x86_EXE/main/assets/audio/strudel.json')
 setcpm(138/4)
 
 const ROOT_NOTE = 'F#'
@@ -114,12 +115,24 @@ let lead = n(`<
   .room(1)
   .gain(.12)
 
+let riser = n("<0 ~>")
+  .s("fx_riser_1")
+  .clip(2)
+  .gain(.5)
+
+let drop = n("<0>")
+  .s("fx_bass_drop_1")
+  .clip(4)
+  .gain(1.2)
+
 // $: bass
 // $: triplets
 // $: prelead
 // $: lead
 // $: prekick
 // $: kick
+// $: riser
+// $: drop
 
 $: stack (
   bass.postgain(`<
@@ -224,5 +237,15 @@ $: stack (
       0!4
       0!4
       0!4
+      >`)
+  ,riser.mask(`<
+      0!28
+      0 0 1 0
+      0!20
+      >`)
+  ,drop.mask(`<
+      0!32
+      1 0!3
+      0!20
       >`)
 ).punchcard()
