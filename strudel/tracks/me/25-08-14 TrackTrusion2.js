@@ -56,6 +56,8 @@ let lead = n(`<
     [-2 [2 ~]]
     >`)
   .scale(ROOT_NOTE + '3' + SCALE_TYPE)
+  .echo(3, 1/6, .5)
+  .clip(.6)
   .attack(.025)
   .lpf(perlin.rangex(2000, 15000).slow(1.5))
   .lpenv(perlin.range(1,6).slow(2))
