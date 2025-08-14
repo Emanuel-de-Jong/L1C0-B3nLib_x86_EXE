@@ -5,25 +5,34 @@ setcpm(138/4)
 const ROOT_NOTE = 'F#'
 const SCALE_TYPE = ':major'
 
+let prekick = note("D2*16")
+  .s("bd:1")
+  .bank("RolandTR909")
+  .lpf(2000)
+  .lps(.7)
+  .hpf(400)
+  .gain(.6)
+
 let kick = note("[D2 E2]*2")
   .s("[bd:1 bd:1]*2")
   .bank("RolandTR909")
   .lpf(2000)
   .lps(.7)
   .release(.8)
+  .gain(1)
 
 let triplets = n("[~ -5 0 0]*4"
-    .add("<0 2 4 -2>"))
+    .add("<0 -4 -6 -2>"))
   .scale(ROOT_NOTE + '2' + SCALE_TYPE)
   .s("sawtooth, sine")
   .lpf(150)
   .lpd(.3)
   .distort(.7)
-  .postgain(0.8)
+  .gain(0.8)
 
 const BASS_WAVE = "sawtooth"
 let bass = n(`<
-    0 2 4 -2
+    0 -4 -6 -2
     >`)
   .scale(ROOT_NOTE + '2' + SCALE_TYPE)
   .layer(
@@ -39,26 +48,19 @@ let bass = n(`<
   .release(.4)
   // .early(.3)
   .lpf(800)
-  .postgain(.4)
-
-let support = n(`<
-    0 -2 -4 2
-    >`)
-  .scale(ROOT_NOTE + '4' + SCALE_TYPE)
-  .s("piano")
-  .postgain(1)
+  .gain(.4)
 
 const LEAD_WAVE = "sawtooth"
 let lead = n(`<
-    [0 ~]
-    [2 [2 0]]
-    [4 [-2 0]]
-    [-2 [2 ~]]
+    [[0 0 [0 0]] [0 [0 2] 2]]
+    [[-4 -4 [-4 -4]] [-4 [-4 -4] -4]]
+    [[-6 -6 [-6 -6]] [-4 [-4 0] 0]]
+    [[0 0 [-2 -2]] [-2 [-2 -2] -2]]
     >`)
   .scale(ROOT_NOTE + '3' + SCALE_TYPE)
   .echo(3, 1/6, .5)
   .clip(.6)
-  .attack(.025)
+  .attack(.02)
   .lpf(perlin.rangex(2000, 15000).slow(1.5))
   .lpenv(perlin.range(1,6).slow(2))
   .add("-7, 0, 7")
@@ -73,10 +75,99 @@ let lead = n(`<
     ,x=>x.s("sine")
       .gain(.5))
   .room(1)
-  .postgain(.3)
+  .gain(.12)
 
-$: kick
-$: triplets
-$: bass
-// $: support
-$: lead
+// $: kick
+// $: triplets
+// $: bass
+// $: lead
+
+$: stack (
+  bass.postgain(`<
+      .4 .6 .75 1
+      1!3 .75
+      .6 .75 1!2
+      1!4
+      1!4
+      1!4
+      1!4
+      .5 .6 .7 .8
+      1!4
+      1!4
+      [.94 .88 .81 .75] [.69 .63 .56 0.5] [.44 .38 .31 .25] [.19 .13 .06 0]
+      0!4
+      >`)
+  ,triplets.postgain(`<
+      0!4
+      0!4
+      [.2 .4 .2 .3] [.4 .6 .5 .5] [.7 .7 .6 .8] .9
+      1!4
+      1!4
+      1!4
+      1!4
+      0
+      1!4
+      1!4
+      [.94 .88 .81 .75] [.69 .63 .56 0.5] [.44 .38 .31 .25] [.19 .13 .06 0]
+      0!4
+      >`)
+  ,lead.postgain(`<
+      1!4
+      0!4
+      0!4
+      0!4
+      [.2 .3] [.4 .5] [.5 .4] [.3 .5]
+      [.5 .7] [.7 .7] .8!2
+      .8!4
+      .8!4
+      1!4
+      1!4
+      [.94 .88 .81 .75] [.69 .63 .56 0.5] [.44 .38 .31 .25] [.19 .13 .06 0]
+      0!4
+      >`)
+    .lpf(`<
+      700!28
+      [700 600] [400 200] [100 50] 0
+      50000!1000
+      >`)
+    .room(`<
+      .2!32
+      1!1000
+      >`)
+    .attack(`<
+      .1!32
+      .02!1000
+      >`)
+  ,prekick.postgain(`<
+      0!4
+      0!4
+      0!4
+      0!4
+      0!4
+      0!4
+      [1 0!15] 0 [1 0!15] 0
+      [[1 0!3]!4]!2 [[1 0]!8] 1
+      0!4
+      0!4
+      0!4
+      0!4
+      >`)
+    .delay(`<
+      [.5:.4:.3]!4
+      0!1000
+      >`)
+  ,kick.postgain(`<
+      0!4
+      0!4
+      0!4
+      0!4
+      0!4
+      0!4
+      0!4
+      0!4
+      1!4
+      1!4
+      0!4
+      0!4
+      >`)
+)
